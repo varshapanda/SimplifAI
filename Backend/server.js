@@ -6,7 +6,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express();
 app.use(
   cors({
-  origin:["https://simplif-ai-six.vercel.app", "http://localhost:5173"]
+  origin:[process.env.FRONTEND_URL, "http://localhost:5173"]
 }));
 
 app.use(express.json());
