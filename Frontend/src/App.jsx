@@ -11,7 +11,7 @@ const App = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/explain", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/explain`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -20,7 +20,8 @@ const App = () => {
       setAnswer(data.answer);
       setQuestion("");
     } catch (err) {
-      setAnswer("Something went wrong! Make sure the server is running", err);
+      setAnswer("Something went wrong! Make sure the server is running");
+      console.error(err);
     }
     setLoading(false);
   };
@@ -44,7 +45,7 @@ const App = () => {
               type="text"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSubmit()}
+              onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
               placeholder="Why is the sky blue?"
               className="flex-1 p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={loading}
