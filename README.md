@@ -1,5 +1,7 @@
 # SimplifAI
 
+**Live Demo**: [https://simplif-ai-5.vercel.app](https://simplif-ai-5.vercel.app/)
+
 **SimplifAI** is a web application that simplifies complex concepts into clear, digestible explanations using Google's Gemini AI API. Designed with a minimalist interface and a focus on usability, the application enables users to submit queries and receive AI-generated responses in natural language — explained as if you are five years old.
 
 ---
@@ -38,3 +40,9 @@
 ```bash
 git clone https://github.com/yourusername/clarifai
 cd simplifai
+```
+
+![App](./Screenshots/Screenshot%202025-08-06%20201513.png)
+![Ask Question](./Screenshots/Screenshot%202025-08-06%20201559.png)
+![Thinking](./Screenshots/Screenshot%202025-08-06%20201633.png)
+![Answer](./Screenshots/Screenshot%202025-08-06%20201647.png)
